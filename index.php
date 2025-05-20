@@ -3,10 +3,9 @@
 function checklength($string){
     if(strlen($string)>=8){
         return true;
-    }else{
-        echo "la password deve contenere almeno 8 caratteri \n";
-    return false;
     }
+    echo "la password deve contenere almeno 8 caratteri \n";
+    return false;
 }
 
 
@@ -15,12 +14,11 @@ function checklength($string){
 function checkuppercase($string){
     for($i=0;  $i<strlen($string); $i++){
         if(ctype_upper($string[$i])){
-           return true ;
-        }else{
-            echo "manca una lettera maiuscola \n";
-            return false;
+           return true;
         }
     }
+    echo "manca una lettera maiuscola \n";
+            return false;
 }
 
 
@@ -30,7 +28,6 @@ function checknumber($string){
         if(is_numeric($string[$i])){
            return true ;
         }
-        
     }
     echo "almeno un numero \n";
             return false;
